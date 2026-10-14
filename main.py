@@ -64,3 +64,30 @@ list(dict_1.values()) # => [1, 2, 3]
 # Use .get() to avoid KeyError
 dict_1.get("one")  # => 1
 dict_1.get("four") # => None
+
+# === SETS
+empty_set = set()
+some_set = {1, 1, 2, 2, 3, 4} # some_set = {1, 2, 3, 4}
+
+# Similarly to dictionaries, elements of a set have to be immutable
+# invalid_set = {[1], 2} # Error!
+valid_set = {(1,), 2}
+
+some_set.add(5) # Sets do not have duplicate elements
+other_set = {3, 4, 5, 6}
+
+# Intersection with &
+some_set & other_set # => {3, 4, 5}
+
+# Union with |
+some_set | other_set # => {1, 2, 3, 4, 5, 6}
+
+# Superset with >=
+{1, 2} >= {1, 2, 3} # => False
+
+# Subset with <=
+{1, 2} <= {1, 2, 3} # => True
+
+# Check for existence in a set with 'in'
+2 in some_set  # => True
+10 in some_set # => False
